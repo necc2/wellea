@@ -25,3 +25,21 @@ const newsData = [
     new: false
   }
 ];
+const newsList = document.getElementById("news-list");
+
+if (newsList) {
+  newsData.slice(0, 5).forEach((news) => {
+    const article = document.createElement("article");
+    article.className = "news-item";
+
+    article.innerHTML = `
+      <div class="news-date">${news.date}</div>
+      <div class="news-content">
+        ${news.new ? '<span class="news-new">NEW</span>' : ''}
+        <p>${news.title}</p>
+      </div>
+    `;
+
+    newsList.appendChild(article);
+  });
+}
