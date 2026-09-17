@@ -101,27 +101,55 @@ if (newsList) {
     });
 
     // ページ番号
-    if (totalPages >= 1) {
+if (totalPages >= 1) {
 
-      const pagination = document.createElement("div");
-      pagination.className = "pagination";
+  const pagination = document.createElement("div");
+  pagination.className = "pagination";
 
-      for (let page = 1; page <= totalPages; page++) {
+  // 前のページ
+  if (currentPage > 1) {
+    const prev = document.createElement("a");
+    prev.href = `news.html?page=${currentPage - 1}`;
+    prev.textContent = "‹";
+    prev.className = "pagination-arrow";
+    pagination.appendChild(prev);
+  } else {
+    const prev = document.createElement("span");
+    prev.textContent = "‹";
+    prev.className = "pagination-arrow disabled";
+    pagination.appendChild(prev);
+  }
 
-        const link = document.createElement("a");
-        link.href = `news.html?page=${page}`;
-        link.textContent = page;
+  // ページ番号
+  for (let page = 1; page <= totalPages; page++) {
 
-        // 現在のページを表示
-        if (page === currentPage) {
-          link.className = "active";
-        }
+    const link = document.createElement("a");
+    link.href = `news.html?page=${page}`;
+    link.textContent = page;
 
-        pagination.appendChild(link);
-      }
-
-      newsList.parentNode.appendChild(pagination);
+    if (page === currentPage) {
+      link.className = "active";
     }
+
+    pagination.appendChild(link);
+  }
+
+  // 次のページ
+  if (currentPage < totalPages) {
+    const next = document.createElement("a");
+    next.href = `news.html?page=${currentPage + 1}`;
+    next.textContent = "›";
+    next.className = "pagination-arrow";
+    pagination.appendChild(next);
+  } else {
+    const next = document.createElement("span");
+    next.textContent = "›";
+    next.className = "pagination-arrow disabled";
+    pagination.appendChild(next);
+  }
+
+  newsList.parentNode.appendChild(pagination);
+}
 
   }
 
