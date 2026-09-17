@@ -64,7 +64,7 @@ if (newsList) {
   if (location.pathname.endsWith("/news.html")) {
 
     // 1ページに表示する件数
-    const itemsPerPage = 10;
+    const itemsPerPage = 5;
 
     // URLからページ番号を取得
     const params = new URLSearchParams(location.search);
