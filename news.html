@@ -80,6 +80,49 @@
         font-size: 16px;
       }
     }
+    /* NEWS ページネーション */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 36px;
+  width: 100%;
+}
+
+.pagination a,
+.pagination span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #24202a;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.pagination a.active {
+  background: #24202a;
+  color: #fff;
+  border-color: #24202a;
+}
+
+.pagination a:hover {
+  opacity: 0.7;
+}
+
+.pagination-arrow {
+  font-size: 24px !important;
+}
+
+.pagination .disabled {
+  color: #ccc;
+  border-color: #eee;
+}
   </style>
 </head>
 
