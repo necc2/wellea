@@ -63,11 +63,13 @@ if (newsList) {
       article.className = "news-item";
 
       article.innerHTML = `
-        <div class="news-date">${news.date}</div>
-        <div class="news-content">
-          ${news.new ? '<span class="news-new">NEW</span>' : ''}
-          <p>${news.title}</p>
-        </div>
+        <div class="news-date">
+  ${news.date}
+  ${news.new ? '<span class="news-new">NEW</span>' : ''}
+</div>
+<div class="news-content">
+  <p>${news.title}</p>
+</div>
       `;
 
       newsList.appendChild(article);
