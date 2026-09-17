@@ -28,18 +28,45 @@ const newsData = [
 const newsList = document.getElementById("news-list");
 
 if (newsList) {
-  newsData.slice(0, 5).forEach((news) => {
-    const article = document.createElement("article");
-    article.className = "news-item";
 
-    article.innerHTML = `
-      <div class="news-date">${news.date}</div>
-      <div class="news-content">
-        ${news.new ? '<span class="news-new">NEW</span>' : ''}
-        <p>${news.title}</p>
-      </div>
-    `;
+  // トップページ：最新5件
+  if (location.pathname.endsWith("/index.html") || location.pathname.endsWith("/")) {
 
-    newsList.appendChild(article);
-  });
+    newsData.slice(0, 5).forEach((news) => {
+      const article = document.createElement("article");
+      article.className = "news-item";
+
+      article.innerHTML = `
+        <div class="news-date">${news.date}</div>
+        <div class="news-content">
+          ${news.new ? '<span class="news-new">NEW</span>' : ''}
+          <p>${news.title}</p>
+        </div>
+      `;
+
+      newsList.appendChild(article);
+    });
+
+  }
+
+  // お知らせページ：6件目以降
+  if (location.pathname.endsWith("/news.html")) {
+
+    newsData.slice(5).forEach((news) => {
+      const article = document.createElement("article");
+      article.className = "news-item";
+
+      article.innerHTML = `
+        <div class="news-date">${news.date}</div>
+        <div class="news-content">
+          ${news.new ? '<span class="news-new">NEW</span>' : ''}
+          <p>${news.title}</p>
+        </div>
+      `;
+
+      newsList.appendChild(article);
+    });
+
+  }
+
 }
