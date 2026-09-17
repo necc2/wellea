@@ -323,23 +323,81 @@ footer strong{font-size:22px}
      position:fixed;
      right:18px;
      bottom:20px;
-     width:88px;
-     height:88px;
+     width:96px;
+     height:96px;
      border-radius:50%;
-     background:#fff;
-     border:2px solid #e7c9e8;
-     box-shadow:0 4px 16px rgba(0,0,0,.15);
+     background:linear-gradient(135deg,#f8c8e8,#cdb7ee);
+     box-shadow:0 6px 20px rgba(120,80,140,.25);
+     z-index:9999;
      display:flex;
-     flex-direction:column;
      align-items:center;
      justify-content:center;
-     text-align:center;
-     z-index:9999;
-     color:#24202a;
      text-decoration:none;
+     overflow:hidden;
    ">
-  <span style="font-size:25px;line-height:1;">♡</span>
-  <small style="margin-top:5px;font-size:10px;font-weight:700;">歌ってほしい曲</small>
+
+  <svg viewBox="0 0 100 100"
+       width="96"
+       height="96"
+       style="position:absolute;inset:0;">
+
+    <defs>
+      <path id="requestCircle"
+            d="M 50,50
+               m -36,0
+               a 36,36 0 1,1 72,0
+               a 36,36 0 1,1 -72,0"/>
+    </defs>
+
+    <circle cx="50"
+            cy="50"
+            r="43"
+            fill="none"
+            stroke="rgba(255,255,255,.75)"
+            stroke-width="1.5"/>
+
+    <text
+      fill="#ffffff"
+      font-size="8"
+      font-weight="700"
+      letter-spacing="2">
+      <textPath href="#requestCircle"
+                startOffset="50%"
+                text-anchor="middle">
+        SONG REQUEST • SONG REQUEST •
+      </textPath>
+    </text>
+
+    <circle cx="50"
+            cy="50"
+            r="23"
+            fill="rgba(255,255,255,.92)"/>
+
+    <text x="50"
+          y="56"
+          text-anchor="middle"
+          font-size="28"
+          fill="#d98acb">
+      ♡
+    </text>
+
+    <circle cx="18"
+            cy="22"
+            r="2.2"
+            fill="#ffffff"/>
+
+    <circle cx="82"
+            cy="72"
+            r="1.8"
+            fill="#ffffff"/>
+
+    <circle cx="76"
+            cy="18"
+            r="1.5"
+            fill="#ffffff"/>
+
+  </svg>
+
 </a>
 </body>
 </html>
