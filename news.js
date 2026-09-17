@@ -24,13 +24,12 @@ const newsData = [
     title: "メンバー紹介ページを公開しました(仮)",
     new: false
   },
-
 　{
   date: "2026.09.11",
   title: "テスト用のお知らせ(仮)",
   new: false
   }
-  
+
 ];
 const newsList = document.getElementById("news-list");
 
