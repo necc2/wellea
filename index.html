@@ -126,6 +126,36 @@ footer strong{font-size:22px}
       }
     }
   }
+  .news-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 28px auto 0;
+  padding: 12px 28px;
+  border: 1px solid #24202a;
+  border-radius: 999px;
+  color: #24202a;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.news-more::after {
+  content: "›";
+  margin-left: 12px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.news-more:hover {
+  background: #24202a;
+  color: #fff;
+}
+</style>
+</head>
+<body>
   <a class="request-button"
    href="https://forms.gle/8BwogbXLJWq9eXBB7"
    target="_blank"
@@ -133,9 +163,6 @@ footer strong{font-size:22px}
   <span>♡</span>
   <small>歌ってほしい曲</small>
 </a>
-</style>
-</head>
-<body>
 <header>
 <nav class="nav">
   <a class="logo" href="#top">wellea</a>
